@@ -4,8 +4,8 @@ import { Bar } from "recharts"
 import { BarGraphic } from "./BarGraphic"
 import {  HexaGraphic } from "./HexaGraphic"
 import { CheeseGraphic } from "./CheeseGraphic"
-import { HexaGraphicTrue } from "./HexaGraphicTrue"
 import { LineGraphics } from "./LineGraphics"
+import { HexaGraphicTrue } from "./HexaGraphicTrue"
 
 export const Router = () => {
   return (
@@ -44,6 +44,14 @@ export const Router = () => {
              grafico linea
             </Link>
           </li>
+          <li>
+            <Link
+              to="/hexagono"
+              className="hover:text-gray-300 transition duration-300"
+            >
+             grafico hexagonal
+            </Link>
+          </li>
         </ul>
       </nav>
     <Routes>
@@ -51,6 +59,7 @@ export const Router = () => {
       <Route path="/ola" element={<HexaGraphic/>} />
       <Route path="/queso" element={<CheeseGraphic/>} />
       <Route path="/line" element={<LineGraphics/>} />
+      <Route path="/hexagono" element={<HexaGraphicTrue/>} />
       <Route path="*" element={<h2>pagina no encotrada</h2>} />
     
     </Routes>

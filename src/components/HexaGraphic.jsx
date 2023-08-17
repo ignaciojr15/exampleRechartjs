@@ -107,7 +107,7 @@ export const HexaGraphic = () => {
             }}
           >
             {/* strokeDasharray="3 3 para poner las lineas punteadas  */}
-            <CartesianGrid strokeDasharray="3 3" />
+            <CartesianGrid strokeDasharray="3 3" strokeDashoffset={3} />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip  content={<CustomTooltip /> }  />

@@ -43,13 +43,21 @@ const data = [
 export const HexaGraphicTrue = () => {
   return (
     <>
-    <h1>hola internuatas</h1>
+    <div className="question">
+    <div className="question-container">
+      {/* es importante que el responsiveContainer tenga un contenedor padre sino no se renderiza */}
+        <ResponsiveContainer width="100%" height="100%">
+
     <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
       <PolarRadiusAxis />
       <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+      <Radar name="Mike" dataKey="B" stroke="#479731" strokeWidth={2} fill="#42CA1D" fillOpacity={0.3} />
     </RadarChart>
+    </ResponsiveContainer>
+    </div>
+</div>
 </>
   )
 }
